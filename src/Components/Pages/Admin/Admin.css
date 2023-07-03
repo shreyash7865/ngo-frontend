@@ -1,0 +1,11 @@
+.admin-dashboard-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 5rem;
+}
+
+.admin-dashboard-section a{
+    margin: 1rem;
+}

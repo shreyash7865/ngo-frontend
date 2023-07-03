@@ -1,0 +1,17 @@
+.navigation{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+.links{
+}
+.links:hover{
+    border-bottom: 3px solid blue;
+}

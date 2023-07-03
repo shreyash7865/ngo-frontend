@@ -1,0 +1,33 @@
+.ngo-request-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.ngo-request-form{
+    margin-top: 4rem;
+}
+.ngo-request-form form{
+    border: 1px solid black;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.ngo-request-form form input{
+    width: 80%;
+    height: 35px;
+    margin-top: 1rem;
+    border: 1px solid black;
+
+}
+.ngo-request-form form button{
+    width: 80%;
+    height: 35px;
+    background-color: green;
+    color: white;
+    
+}

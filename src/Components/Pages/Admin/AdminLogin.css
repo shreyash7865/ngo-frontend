@@ -1,0 +1,25 @@
+.admin-login-section{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.admin-login-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border: 5px solid rgb(191, 191, 250);
+}
+
+.admin-login-form form input{
+    height: 30px;
+    width: 350px;
+    margin-top: 20px;
+    border: 3px solid rgb(169, 169, 238);
+}
+.admin-login-submit{
+    border: 3px solid rgb(169, 169, 238);
+}
+
