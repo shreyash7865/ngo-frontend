@@ -26,7 +26,7 @@ function ViewMedicines() {
 
 
   const getMedicineData = (e)=>{
-    fetch(`http://localhost:2020/api/admin/medicines`)
+    fetch(`https://ngo-backend-wz9s.onrender.com/api/admin/medicines`)
     .then((res)=> res.json())
     .then((data)=>{
       console.log(data);
