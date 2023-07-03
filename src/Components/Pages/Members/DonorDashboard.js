@@ -11,7 +11,7 @@ function DonorDashboard() {
 
   const postMedicine = async(e)=>{
     e.preventDefault();
-    const response = await fetch(`http://localhost:2020/api/donor/add-medicine`, {
+    const response = await fetch(`https://ngo-backend-wz9s.onrender.com/api/donor/add-medicine`, {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'

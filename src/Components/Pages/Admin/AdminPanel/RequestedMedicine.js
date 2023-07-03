@@ -22,7 +22,7 @@ function RequestedMedicine() {
     const [ngoData, setNgoData]= useState([]);
 
     const getMedicineData = (e)=>{
-        fetch(`http://localhost:2020/api/admin/requested-medicine`)
+        fetch(`https://ngo-backend-wz9s.onrender.com/api/admin/requested-medicine`)
         .then((res)=> res.json())
         .then((data)=>{
           console.log(data);

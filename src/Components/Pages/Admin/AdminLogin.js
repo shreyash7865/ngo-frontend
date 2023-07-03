@@ -11,7 +11,7 @@ function AdminLogin() {
   const [password, setPassword] = useState("");
   const AdmLogin = async(e)=>{
     e.preventDefault();
-    const response = await fetch(`http://localhost:2020/api/admin/login`, {
+    const response = await fetch(`https://ngo-backend-wz9s.onrender.com/api/admin/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -11,7 +11,7 @@ function MemberLogin() {
 
   const Login_member = async(e)=>{
     e.preventDefault();
-    const response = await fetch(`http://localhost:2020/api/donor/login`,{
+    const response = await fetch(`https://ngo-backend-wz9s.onrender.com/api/donor/login`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

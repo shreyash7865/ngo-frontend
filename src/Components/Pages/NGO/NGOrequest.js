@@ -8,7 +8,7 @@ function NGOrequest() {
 
   const RequestMed = async(e)=>{
     e.preventDefault();
-    const response = await fetch(`http://localhost:2020/api/ngo/request-medicine`, {
+    const response = await fetch(`https://ngo-backend-wz9s.onrender.com/api/ngo/request-medicine`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

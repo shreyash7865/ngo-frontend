@@ -8,7 +8,7 @@ function ViewMedicines() {
   const [status, setStatus] = useState(null);
 
   const deleteMedicine = (id)=>{
-    fetch(`http://localhost:2020/api/admin/medicines/`+id, {
+    fetch(`https://ngo-backend-wz9s.onrender.com/api/admin/medicines/`+id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
