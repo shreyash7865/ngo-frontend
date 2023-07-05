@@ -9,7 +9,7 @@ function Navigation() {
         <div className="section-links">
           <div className="links"><a style={{textDecoration: 'none', color: 'black'}} href="/admin-login">Admin</a></div>
           <div className="links"><a style={{textDecoration: 'none', color: 'black'}} href="/request-ngo">NGO</a></div>
-          <div className="links"><a style={{textDecoration: 'none', color: 'black'}} href="/donor-registration">Donor</a></div>
+          <div className="links"><a style={{textDecoration: 'none', color: 'black'}} href="/donor-login">Donor</a></div>
         </div>
       </div>
   )
