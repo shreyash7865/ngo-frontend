@@ -41,7 +41,8 @@ function MemberLogin() {
         <form onSubmit={Login_member} method='post'>
             <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Enter Your Email' /> <br />
             <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter Password' /> <br />
-            <button type='submit'>Submit</button>
+            <button type='submit'>Submit</button> <br />
+            <a href="/donor-registration">Register Yourself</a>
 
         </form>
     </div>
