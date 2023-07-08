@@ -39,8 +39,10 @@ const Members = () => {
   };
 
   return (
-    <div>
-      <h2>Member Sign Up</h2>
+    <div className='ngo-request-section'>
+            <h2>Member Sign Up</h2>
+
+      <div className="ngo-request-form">
       <form>
         <label>
           First Name:
@@ -91,6 +93,8 @@ const Members = () => {
           Sign Up
         </button>
       </form>
+      </div>
+      
     </div>
   );
 };
