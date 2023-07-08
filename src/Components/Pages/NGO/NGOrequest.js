@@ -42,6 +42,10 @@ function NGOrequest() {
                 <button type='submit'>Request</button>
             </form>
         </div>
+        <div className="ngo-register">
+            <h3>Don't have an account?</h3>
+            <a href="/ngo-signup">Register</a>
+        </div>
     </div>
   )
 }

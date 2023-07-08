@@ -15,6 +15,7 @@ import MemberLogin from './Components/Pages/Members/MemberLogin';
 import DonorDashboard from './Components/Pages/Members/DonorDashboard';
 import RequestedMedicine from './Components/Pages/Admin/AdminPanel/RequestedMedicine';
 import DoctorChatbot from './Components/DoctorChatbot';
+import NGOSignup from './Components/Pages/NGO/NGOSignup';
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
           <Route exact path='/donor-login' element={<MemberLogin/>}/>
           <Route exact path='/donor-dashboard' element={<DonorDashboard/>}/>
           <Route exact path='/requested-medicine' element={<RequestedMedicine/>}/>
+          <Route exact path='/ngo-signup' element={<NGOSignup/>}/>
           <Route exact path='/chatbot' element={<DoctorChatbot/>}/>
 
         </Routes>
