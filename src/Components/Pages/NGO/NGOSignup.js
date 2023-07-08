@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import './NGOrequest.css';
 const NGOSignup = () => {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
@@ -29,15 +29,19 @@ const NGOSignup = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="ID" value={id} onChange={(e) => setId(e.target.value)} />
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} />
+    <div className='ngo-request-section' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <h2>NGO Register</h2>
+        <div className="ngo-request-form">
+        <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="ID" value={id} onChange={(e) => setId(e.target.value)} /> <br />
+        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} /> <br />
+        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} /> <br />
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
+        <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} /> <br />
         <button type="submit">Sign Up</button>
       </form>
+        </div>
+      
     </div>
   );
 };
