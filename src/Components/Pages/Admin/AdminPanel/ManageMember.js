@@ -15,8 +15,10 @@ const ManageMember = () => {
   }, []);
 
   return (
-    <div>
+    <div className='view-medicine-section'>
+
       <h2>Manage Members</h2>
+      <div className="medicine-information">
       <table>
         <thead>
           <tr>
@@ -37,6 +39,8 @@ const ManageMember = () => {
           ))}
         </tbody>
       </table>
+      </div>
+      
     </div>
   );
 };
