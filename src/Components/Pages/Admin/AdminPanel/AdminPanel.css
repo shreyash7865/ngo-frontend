@@ -37,3 +37,11 @@
     margin-top: 4rem;
     width: 100vw;
 }
+.medicine-information{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
