@@ -46,28 +46,19 @@ const Members = () => {
         <form>
           <label>
             First Name:
-            <input required
-              type="text"
-              value={fName}
-              onChange={(e) => setFName(e.target.value)}
+            <input required type="text" value={fName} onChange={(e) => setFName(e.target.value)}
             />
           </label>
           <br />
           <label>
             Last Name:
-            <input required
-              type="text"
-              value={lName}
-              onChange={(e) => setLName(e.target.value)}
+            <input required type="text" value={lName} onChange={(e) => setLName(e.target.value)}
             />
           </label>
           <br />
           <label>
             Email:
-            <input required
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+            <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <br />
@@ -82,10 +73,7 @@ const Members = () => {
           <br />
           <label>
             Address:
-            <input required
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
+            <input required type="text" value={address} onChange={(e) => setAddress(e.target.value)}
             />
           </label>
           <br />
