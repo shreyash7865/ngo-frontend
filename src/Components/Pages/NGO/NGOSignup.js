@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './NGOrequest.css';
 const NGOSignup = () => {
-  const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +11,6 @@ const NGOSignup = () => {
     e.preventDefault();
 
     const formData = {
-      id,
       name,
       username,
       password,
@@ -26,6 +24,12 @@ const NGOSignup = () => {
       .catch((error) => {
         console.error(error);
       });
+
+    setName('');
+    setUsername('');
+    setPassword('');
+    setAddress('');
+
   };
 
   return (
@@ -33,7 +37,6 @@ const NGOSignup = () => {
         <h2>NGO Register</h2>
         <div className="ngo-request-form">
         <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="ID" value={id} onChange={(e) => setId(e.target.value)} /> <br />
         <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} /> <br />
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} /> <br />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
