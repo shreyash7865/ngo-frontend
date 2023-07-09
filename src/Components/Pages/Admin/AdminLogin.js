@@ -21,18 +21,19 @@ function AdminLogin() {
       })
     })
     const data = await response.json()
-    // .then((data)=>{
-    //   localStorage.setItem('token', data.token)
-    //   localStorage.setItem('regdNumber', data.regdNumber)
-    // })
-    // .then((data)=>{
-    //   navigate('/admin-dashboard')
-    // })
-    // .catch((err)=>{
-    //   alert("error")
-    // })
-    console.log(data)
-   
+    if(data && data.length>0){
+      navigate('/admin-dashboard')
+    }
+    else{
+      alert("Invalid Credentials")
+    }
+    console.log(data);
+    setRegdNumber("");
+    setPassword("");
+
+
+    
+    
   }
   return (
     <div className='admin-login-section'>
