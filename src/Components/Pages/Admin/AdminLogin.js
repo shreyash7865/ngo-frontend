@@ -21,16 +21,16 @@ function AdminLogin() {
       })
     })
     const data = await response.json()
-    .then((data)=>{
-      localStorage.setItem('token', data.token)
-      localStorage.setItem('regdNumber', data.regdNumber)
-    })
-    .then((data)=>{
-      navigate('/admin-dashboard')
-    })
-    .catch((err)=>{
-      alert("error")
-    })
+    // .then((data)=>{
+    //   localStorage.setItem('token', data.token)
+    //   localStorage.setItem('regdNumber', data.regdNumber)
+    // })
+    // .then((data)=>{
+    //   navigate('/admin-dashboard')
+    // })
+    // .catch((err)=>{
+    //   alert("error")
+    // })
     console.log(data)
    
   }
