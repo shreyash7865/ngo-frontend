@@ -20,7 +20,18 @@ function AdminLogin() {
         regdNumber, password
       })
     })
-    const data = await response.json();
+    const data = await response.json()
+    .then((data)=>{
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('regdNumber', data.regdNumber)
+    })
+    .then((data)=>{
+      navigate('/admin-dashboard')
+    })
+    .catch((err)=>{
+      alert("error")
+    })
+
     console.log(data)
     if(!data){
       alert("Invalid Credentials")
