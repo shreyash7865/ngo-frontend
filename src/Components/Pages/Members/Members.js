@@ -40,61 +40,61 @@ const Members = () => {
 
   return (
     <div className='ngo-request-section'>
-            <h2>Member Sign Up</h2>
+      <h2>Member Sign Up</h2>
 
       <div className="ngo-request-form">
-      <form>
-        <label>
-          First Name:
-          <input
-            type="text"
-            value={fName}
-            onChange={(e) => setFName(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Last Name:
-          <input
-            type="text"
-            value={lName}
-            onChange={(e) => setLName(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Address:
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleSignUp}>
-          Sign Up
-        </button>
-      </form>
+        <form>
+          <label>
+            First Name:
+            <input required
+              type="text"
+              value={fName}
+              onChange={(e) => setFName(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Last Name:
+            <input required
+              type="text"
+              value={lName}
+              onChange={(e) => setLName(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Email:
+            <input required
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Password:
+            <input required
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Address:
+            <input required
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </label>
+          <br />
+          <button type="button" onClick={handleSignUp}>
+            Sign Up
+          </button>
+        </form>
       </div>
-      
+
     </div>
   );
 };

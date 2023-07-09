@@ -1,53 +1,63 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function MemberLogin() {
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const MemberLogin = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-
-
-  const Login_member = async(e)=>{
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const response = await fetch(`https://ngo-backend-wz9s.onrender.com/api/donor/login`,{
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body:JSON.stringify({
-        email, password
-      })
-    })
-    const data = await(response.json());
-    console.log(data);
 
-    if(!data){
-      alert("Invalid Credentials..")
-    }else{
-      alert("You Logged In");
-      navigate('/donor-dashboard')
+    try {
+      const response = await axios.post('/login', {
+        email: email,
+        password: password
+      });
+
+      if (response.data.results) {
+        // Login successful, perform necessary actions (e.g., redirect to member dashboard)
+        console.log('Member Logged In');
+      } else {
+        // Invalid credentials
+        setError('Invalid credentials');
+      }
+    } catch (error) {
+      console.error(error);
+      setError('An error occurred. Please try again later.');
     }
-
-    setEmail("")
-    setPassword("")
-
-  }
+  };
 
   return (
-    <div className='ngo-request-section'>
-    <div className="ngo-request-form">
-        <form onSubmit={Login_member} method='post'>
-            <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Enter Your Email' /> <br />
-            <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter Password' /> <br />
-            <button type='submit'>Submit</button> <br />
-            <a href="/donor-registration">Register Yourself</a>
-
-        </form>
+    <div>
+      <h2>Member Login</h2>
+      {error && <p>{error}</p>}
+      <form onSubmit={handleLogin}>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <a href="/donor-registration">Register</a>
     </div>
-</div>
-  )
-}
+  );
+};
 
-export default MemberLogin
+export default MemberLogin;
