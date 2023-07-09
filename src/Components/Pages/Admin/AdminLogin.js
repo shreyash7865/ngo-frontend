@@ -48,7 +48,8 @@ function AdminLogin() {
       } else {
         // Invalid credentials
         setError('Invalid credentials');
-        navigate('/admin-login');
+        alert("Invalid Credentials")
+        // navigate('/admin-login');
       }
     } catch (error) {
       console.error(error);
