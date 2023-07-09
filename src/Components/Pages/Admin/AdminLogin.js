@@ -31,14 +31,8 @@ function AdminLogin() {
     .catch((err)=>{
       alert("error")
     })
-
     console.log(data)
-    if(!data){
-      alert("Invalid Credentials")
-    }else{
-      alert("Logged in")
-      navigate('/admin-dashboard')
-    }
+   
   }
   return (
     <div className='admin-login-section'>
