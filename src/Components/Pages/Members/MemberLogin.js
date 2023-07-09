@@ -12,7 +12,7 @@ const MemberLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/login', {
+      const response = await axios.post('/api/donor/login', {
         email: email,
         password: password
       });
