@@ -41,9 +41,9 @@ function AdminLogin() {
         password: password
       });
 
-      if (response.data.result) {
+      if (response.data) {
         // Login successful, perform necessary actions (e.g., redirect to admin dashboard)
-        console.log(response.data);
+        console.log(response.data.results);
         navigate('/admin-dashboard');
       } else {
         // Invalid credentials
