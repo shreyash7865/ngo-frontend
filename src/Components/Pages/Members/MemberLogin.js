@@ -17,12 +17,14 @@ const MemberLogin = () => {
         password: password
       });
 
-      if (response.data.results) {
+      if (response.data.result) {
         // Login successful, perform necessary actions (e.g., redirect to member dashboard)
         console.log('Member Logged In');
+        navigate('/donor-dashboard');
       } else {
         // Invalid credentials
         setError('Invalid credentials');
+        navigate('/donor-login');
       }
     } catch (error) {
       console.error(error);
