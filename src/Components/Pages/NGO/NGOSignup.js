@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './NGOrequest.css';
 
 const AddNGOForm = () => {
   const [name, setName] = useState('');
