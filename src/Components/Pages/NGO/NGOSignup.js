@@ -34,7 +34,7 @@ const AddNGOForm = () => {
         <div className='ngo-request-form'>
           <label htmlFor="name">Name:</label>
           <input
-            type="text"
+            type="number"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
