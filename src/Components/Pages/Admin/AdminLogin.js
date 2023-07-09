@@ -21,7 +21,7 @@ function AdminLogin() {
       })
     })
     const data = await response.json()
-    if(data && data.length>0){
+    if(data){
       navigate('/admin-dashboard')
     }
     else{
