@@ -31,9 +31,10 @@ const MemberLogin = () => {
   };
 
   return (
-    <div>
+    <div className='ngo-request-section'>
       <h2>Member Login</h2>
       {error && <p>{error}</p>}
+      <div className="ngo-request-form">
       <form onSubmit={handleLogin}>
         <div>
           <label htmlFor="email">Email:</label>
@@ -55,6 +56,8 @@ const MemberLogin = () => {
         </div>
         <button type="submit">Login</button>
       </form>
+      </div>
+      
       <a href="/donor-registration">Register</a>
     </div>
   );
