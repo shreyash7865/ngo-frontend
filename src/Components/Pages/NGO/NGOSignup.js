@@ -30,45 +30,14 @@ const AddNGOForm = () => {
   return (
     <div className='ngo-request-section'>
       <h2>Add NGO</h2>
-      <form onSubmit={handleAddNGO}>
-        <div className='ngo-request-form'>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="address">Address:</label>
-          <input
-            type="text"
-            id="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
-        </div>
-        <button type="submit">Add NGO</button>
-      </form>
+      <form onSubmit={handleAddNGO} method='post'>
+                <input type="text" required  value={name} onChange={(e)=>setName(e.target.value)} placeholder='Enter NGO Name' /><br />
+                <input type="text" required value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='NGO Username' />  <br />
+                <input type="password" required value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter Password' /> <br />
+                <input type="address" required value={address} onChange={(e)=>setAddress(e.target.value)} placeholder='Enter Address' /> <br />
+
+                <button type='submit'>Request</button>
+            </form>
     </div>
   );
 };
