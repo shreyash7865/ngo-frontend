@@ -41,7 +41,7 @@ function AdminLogin() {
         password: password
       });
 
-      if (response.data) {
+      if (response.data.results) {
         // Login successful, perform necessary actions (e.g., redirect to admin dashboard)
         console.log(response.data.results);
         navigate('/admin-dashboard');
@@ -49,7 +49,7 @@ function AdminLogin() {
         // Invalid credentials
         setError('Invalid credentials');
         alert("Invalid Credentials")
-        // navigate('/admin-login');
+        navigate('/admin-login');
       }
     } catch (error) {
       console.error(error);
